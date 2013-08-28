@@ -1,28 +1,28 @@
 $border-color: #C9C9C9;
 
 /* Template Styles */
-p{
-	padding:5px 0;
-	margin:0;
+p {
+	padding: 5px 0;
+	margin: 0;
 }
 
-a{
-	color:#034769;
+a {
+	color: #034769;
 }
 
-ul{
-	margin:0;
+ul {
+	margin: 0;
 }
 
-body{
-	background:#fafafa;
+body {
+	background: #fafafa;
+	color: #000;
+	font-size: 10pt;
+	font-family: Arial;
 	line-height: 1.15;
-	font-family:Arial;
-	color:#000;
-	font-size:10pt;
 }
 
-.clear:after{
+.clear:after {
 	clear: both;
 	content: ".";
 	display: block;
@@ -30,108 +30,108 @@ body{
 	visibility: hidden;
 }
 
-.content{
-	margin-left:150px;
-	padding:10px;
+.content {
+	padding: 10px;
+	margin-left: 150px;
 }
 
-.menu{
-	position:absolute;
-	left:0;
-	top:0;
-	bottom:0;
-	width:150px;
-	padding:10px 0;
+.menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
     background-color: #ECECEC;
-    border-right:1px solid $border-color;
+	width: 150px;
+	padding: 10px 0;
+    border-right: 1px solid $border-color;
 }
 
-.site_name{
-	font-size:16pt;
-	padding:0 10px;
-	margin:0;
-	font-weight:normal;
+.site_name {
+	padding: 0 10px;
+	margin: 0;
+	font-weight: normal;
+	font-size: 16pt;
 }
 
-.site_name_link{
-	color:#343434;
-	text-decoration:none;	
+.site_name_link {
+	color: #343434;
+	text-decoration: none;	
 }
 
-.site_name_link:hover{
-	color:#ff7700;
+.site_name_link:hover {
+	color: #ff7700;
 }
 
-.header{
-	width:100%;
+.header {
+	width: 100%;
     border-bottom: 1px solid $border-color;
 }
 
-h2{
+h2 {
     color: #343434;
 	font-size: 18px;
 }
 
-.page_title{
+.page_title {
     font-size: 18px;
     padding: 3px 0 2px 10px;
-    float:left;
-	font-weight:normal;
-	margin:0;
+    float: left;
+	font-weight: normal;
+	margin: 0;
 }
 
-.user_info{
-	font-size:12px;
-	padding-top:5px;
-	float:right;
-	color:#707070;
-	font-weight:normal;
-	margin:0;
+.user_info {
+	float: right;
+	padding-top: 5px;
+	margin: 0;
+	color: #707070;
+	font-weight: normal;
+	font-size: 12px;
 }
 
-.user_info_link{
-	color:#033E6B;
+.user_info_link {
+	color: #033E6B;
 }
 
-.user_info_link:hover{
-	color:#ff7700;
+.user_info_link:hover {
+	color: #ff7700;
 }
 
-.navigation{
-	padding:5px 0;
+.navigation {
+	padding: 5px 0;
 }
 
-.nav_item{
-	list-style-type:none;
-	float:left;
-	width:121px;
-	margin:5px 10px 5px 20px;
-	position:relative;
+.nav_item {
+	position: relative;
+	float: left;
+	width: 121px;
+	margin: 5px 10px 5px 20px;
+	list-style-type: none;
 }
 
-.nav_item:before{
-	position:absolute;
-	content:url('../../graphics/button.png');
-	background-image:url('../../graphics/icons.png');
-	background-position:-29px 6px;
-	height:40px;
-	width:40px;
+.nav_item:before {
+	position: absolute;
+	content: url('../../graphics/button.png');
+	background-image: url('../../graphics/icons.png');
+	background-position: -29px 6px;
+	width: 40px;
+	height: 40px;
 }
 
-.nav_item:hover:before{
-	content:url('../../graphics/button-hover.png');
+.nav_item:hover:before {
+	content: url('../../graphics/button-hover.png');
 }
 
-.nav_item:hover .nav_item_link{
-	color:#9C2F23;
+.nav_item:hover .nav_item_link {
+	color: #9C2F23;
 }
 
-.nav_item_link{
-	position:relative;
-	z-index:1;
-	color:#033E6B;
-	font-size:14pt;
-	text-decoration:none;
+.nav_item_link {
+	position: relative;
+	color: #033E6B;
+	font-size: 14pt;
+	text-decoration: none;
+	z-index: 1;
 }
 
 @mixin icon($class, $x, $y) {
@@ -155,70 +155,70 @@ h2{
 
 @include icon('.roles', 0, 14);
 
-.inner_content{
-	padding:10px 20px;
+.inner_content {
+	padding: 10px 20px;
 }
 
-.form{
-	float:left;
-	width:840px;
+.form {
+	float: left;
+	width: 840px;
 }
 
-.form .textbox, .form .textarea{
-	padding:5px 0;
-	clear:left;
+.form .textbox, .form .textarea {
+	padding: 5px 0;
+	clear: left;
 }
 
-.form .textbox, .form .passwordbox{
-	height:30px;
+.form .textbox, .form .passwordbox {
+	height: 30px;
 }
 
-.form .textbox input, .form .passwordbox input{
-	float:left;
-	width:280px;
-	padding:3px;
+.form .textbox input, .form .passwordbox input {
+	float: left;
+	width: 280px;
+	padding: 3px;
 }
 
-.login .textbox input, #login .passwordbox input{
-	width:120px;
+.login .textbox input, #login .passwordbox input {
+	width: 120px;
 }
 
-.form label{
-	width:120px;
-	font-weight:bold;
-	float:left;
-	color:#343434;
+.form label {
+	width: 120px;
+	font-weight: bold;
+	float: left;
+	color: #343434;
 }
 
-.form input{
-	border:1px solid gray;
+.form input {
+	border: 1px solid gray;
 }
 
-.form textarea{
-	border:1px solid gray;
-	width:280px;
-	float:left;
-	padding:3px;
+.form textarea {
+	float: left;
+	width: 280px;
+	padding: 3px;
+	border: 1px solid gray;
 }
 
 /* Tables */
 
-.data_table{
+.data_table {
+	margin: 15px 0;
 	border-bottom: 1px solid $border-color;
-	margin:15px 0;
 
-	th{
-		text-align:left;
-		color: #293744;
-		border-bottom: 1px solid $border-color;
+	th {
 		padding: 0 6px 4px;
+		border-bottom: 1px solid $border-color;
+		color: #293744;
+		text-align: left;
 	}
 
-	td{
-		vertical-align:middle;
-		white-space:nowrap;
-		padding: 2px 6px;
+	td {
 		height: 27px;
+		padding: 2px 6px;
+		vertical-align: middle;
+		white-space: nowrap;
 	}
 
 	td.first {
@@ -229,61 +229,61 @@ h2{
 		border-right: 1px solid $border-color;
 	}
 
-	.edit, .delete{
-		text-align:center;
+	.edit, .delete {
+		text-align: center;
 	}
 
-	tbody tr:nth-child(odd){
-		background:#e3e3e3;
+	tbody tr:nth-child(odd) {
+		background: #e3e3e3;
 	}
 
-	tbody tr:nth-child(even){
-		background:#f7f7f7;
+	tbody tr:nth-child(even) {
+		background: #f7f7f7;
 	}
 }
 
 /* End table styles */
 
-.button{
-	display:inline-block;
-	padding:7px;
-	color:#fff;
-	background:#033E6B;
-	text-decoration:none;
-	font-weight:bold;
-	border-radius:10px;
-	box-shadow:3px 4px 7px -2px #444;
+.button {
+	display: inline-block;
+	background: #033E6B;
+	padding: 7px;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 10px;
+	box-shadow: 3px 4px 7px -2px #444;
 }
 
-.button:hover{
-	background:#9C2F23;
+.button:hover {
+	background: #9C2F23;
 }
 
-.spacing{
-	height:50px;
+.spacing {
+	height: 50px;
 }
 
-.nav_item{
-	height:50px;
+.nav_item {
+	height: 50px;
 }
 
-.nav_item{
-	background-position:bottom left;
+.nav_item {
+	background-position: bottom left;
 }
 
-.nav_item_link{
-	display:block;
-	padding-left:56px;
-	width:100px;
-	padding-top:14px;
-	padding-bottom:20px;
+.nav_item_link {
+	display: block;
+	padding-left: 56px;
+	width: 100px;
+	padding-top: 14px;
+	padding-bottom: 20px;
 }
 
-.wym_box{
-	float:left;
-	width:700px;
+.wym_box {
+	float: left;
+	width: 700px;
 }
 
-#preload{
-	display:none;
+#preload {
+	display: none;
 }
