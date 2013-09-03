@@ -29,5 +29,8 @@
 			<?php echo HTML::image('media/admin/graphics/button-hover.png', array('alt' => '')) ?>
 		</div>
 	</body>
+	<script type="text/javascript">
+		var kohana_base_url = '<?php echo URL::base('http'); ?>admin/';
+	</script>
 	<?php Scripts::output('admin') ?>
 </html>
