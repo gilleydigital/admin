@@ -76,7 +76,7 @@ class Controller_Admin_Auth extends Controller_Template {
 							->values($data)
 							->create();
 				
-				$link = 'http://'.DOMAIN.URL::base().'admin/auth/reset/'.$token->token;
+				$link = URL::base('http').'admin/auth/reset/'.$token->token;
 
 				//Mail
 				$subject = 'Password request for '.$user->username;
