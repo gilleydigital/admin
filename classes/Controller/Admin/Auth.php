@@ -34,6 +34,7 @@ class Controller_Admin_Auth extends Controller_Template {
 		$form = Formaid::form()
 			->text('username')->label('Username')
 			->password('password')->label('Password')
+			->checkbox('remember_me')->label('Remember Me')
 			->submit('Login');
 		
 		// View
