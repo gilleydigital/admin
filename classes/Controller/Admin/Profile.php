@@ -4,7 +4,7 @@ class Controller_Admin_Profile extends Controller_Admin {
 	public function action_index()
 	{
 		// Post
-		if($post = Formaid::post())
+		if ($post = Formaid::post())
 		{
 			try
 			{
@@ -12,7 +12,7 @@ class Controller_Admin_Profile extends Controller_Admin {
 				$update = array('username', 'email');
 				
 				// and password if it's set
-				if($post['password'] !== '')
+				if ($post['password'] !== '')
 				{
 					$update[] = 'password';
 					
@@ -30,15 +30,27 @@ class Controller_Admin_Profile extends Controller_Admin {
 				// Success
 				Formaid::success('admin/profile', 'profile_updated');
 			}
-			catch(ORM_Validation_Exception $e)
+			catch (ORM_Validation_Exception $e)
 			{
 				// Errors
 				Formaid::errors($e->errors('contact'));
 			}
 		}
 		
+		// Form
+		$form = Formaid::form()
+			->html('<h2>Change Info</h2>')
+			->text('username')->label('Username')->value($this->user->username)
+			->text('email')->label('Email')->value($this->user->email)
+			->html('<h2>Change Password</h2>')
+			->password('password')->label('New Password')
+			->password('password_confirm')->label('Confirm Password')
+			->submit('Update');
+		
+		
 		// View
 		$this->template->title = 'Profile';
-		$this->template->content = View::factory('admin/profile/index');
+		$this->template->content = View::factory('admin/profile/index')
+			->bind('form', $form);
 	}
 }
