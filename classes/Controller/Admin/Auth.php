@@ -80,7 +80,7 @@ class Controller_Admin_Auth extends Controller_Template {
 
 				//Mail
 				$subject = 'Password request for '.$user->username;
-				$from = 'info@'.DOMAIN;
+				$from = 'info@'.$_SERVER['HTTP_HOST'];
 				$to = $user->email;
 				$message = View::factory('admin/emails/forgotpassword')
 					->set('link', $link);
@@ -103,7 +103,7 @@ class Controller_Admin_Auth extends Controller_Template {
 		}
 		
 		// Messages
-		Formaid::messages('admin/auth', 'var', 'subvar');
+		Formaid::messages('admin/auth', $this->request->param('var'), $this->request->param('subvar'));
 		
 		// Form
 		$form = Formaid::form()

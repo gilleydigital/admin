@@ -7,7 +7,7 @@ class Controller_Admin_User extends Controller_Admin {
 		$users = ORM::factory('user')->find_all()->as_array();
 
 		// Compile Messages
-		Formaid::messages('admin/user', 'var', 'subvar');
+		Formaid::messages('admin/user', $this->request->param('var'), $this->request->param('subvar'));
 
 		// View
 		$this->template->title = 'Users';
@@ -34,7 +34,7 @@ class Controller_Admin_User extends Controller_Admin {
 				// Send e-mail
 				$subject = 'Your username and password';
 	           
-				$from = 'info@'.DOMAIN;
+				$from = 'info@'.$_SERVER['HTTP_HOST'];
 				$to = $user->email;
 				$message = View::factory('admin/emails/newuser')
 					->set('username', $user->username)
