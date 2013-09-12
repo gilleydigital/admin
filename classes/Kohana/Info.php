@@ -4,7 +4,7 @@ class Kohana_Info {
 	public static function get($key)
 	{
 		$info = Kohana::$config->load('info/values');
-		if($key == 'address')
+		if ($key == 'address')
 		{
 			return View::factory('includes/address')
 				->set('address_1', $info->get('address_1'))
@@ -12,7 +12,8 @@ class Kohana_Info {
 				->set('city', $info->get('city'))
 				->set('zip', $info->get('zip'));
 		}
-		else{
+		else
+		{
 			return $info->get($key);
 		}
 	}
