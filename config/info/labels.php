@@ -1,6 +1,7 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-return array(
-	'user' => 'Users',
-	'info' => 'Info',
+return array
+(
+	'name' => 'Company Name',
+	'email' => 'Email',
 );

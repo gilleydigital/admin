@@ -1,6 +1,5 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
 return array(
-	'user' => 'Users',
-	'info' => 'Info',
+	'info_updated'	=> 'Info successfully updated'
 );

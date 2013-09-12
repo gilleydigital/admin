@@ -1,6 +1,3 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-return array(
-	'user' => 'Users',
-	'info' => 'Info',
-);
+class Info extends Kohana_Info {}
