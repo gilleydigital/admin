@@ -6,6 +6,7 @@ class Controller_Admin_Auth extends Controller_Template {
 	public function action_login()
 	{
 		// If they're already logged in, bump them to the main screen
+
 		$this->user = Auth::instance()->get_user();
 		if (is_object($this->user))
 		{
@@ -29,9 +30,9 @@ class Controller_Admin_Auth extends Controller_Template {
 				Formaid::error('admin/auth', 'bad_login');
 			}
 		}
-		
+
 		// Form
-		$form = Formaid::form()
+		$form = Formaid::form()->class('login')
 			->text('username')->label('Username')
 			->password('password')->label('Password')
 			->checkbox('remember_me')->label('Remember Me')
