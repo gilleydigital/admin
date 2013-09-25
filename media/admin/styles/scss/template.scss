@@ -244,17 +244,21 @@ h2 {
 
 .button {
 	display: inline-block;
-	background: #033E6B;
-	padding: 7px;
+	background-color: #033E6B;
+
+	padding: 7px 20px;
+	border: 0;
+
 	color: #fff;
 	text-decoration: none;
-	font-weight: bold;
-	border-radius: 10px;
-	box-shadow: 3px 4px 7px -2px #444;
-}
 
-.button:hover {
-	background: #9C2F23;
+	box-shadow: 3px 4px 7px -2px #444;
+	border-radius: 10px;
+	cursor: pointer;
+
+	&:hover {
+		background: #9C2F23;
+	}
 }
 
 .spacing {
@@ -284,4 +288,8 @@ h2 {
 
 #preload {
 	display: none;
+}
+
+.are_you_sure .formaid .formfield-submit {
+	margin-right: 20px;
 }
