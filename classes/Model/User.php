@@ -2,9 +2,9 @@
 
 class Model_User extends ORM {
 	protected $_has_many = array(
-		'user_tokens' => array('model' => 'user_token'),
-		'user_resets' => array('model' => 'user_reset'),
-		'roles'       => array('model' => 'role', 'through' => 'roles_users'),
+		'User_Tokens' => array('model' => 'User_Token'),
+		'User_Resets' => array('model' => 'User_Reset'),
+		'Roles'       => array('model' => 'Role', 'through' => 'Roles_Users'),
 	);
 
 	public function rules()

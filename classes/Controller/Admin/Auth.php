@@ -60,7 +60,7 @@ class Controller_Admin_Auth extends Controller_Template {
 		if ($post = Formaid::post())
 		{
 			// Get user
-			$user = ORM::factory('user')
+			$user = ORM::factory('User')
 				->where('email', '=', $post['email'])
 				->find();
 
@@ -73,7 +73,7 @@ class Controller_Admin_Auth extends Controller_Template {
 				);
 
 				// Create a new reset token
-				$token = ORM::factory('user_reset')
+				$token = ORM::factory('User_Reset')
 							->values($data)
 							->create();
 				
@@ -92,7 +92,7 @@ class Controller_Admin_Auth extends Controller_Template {
 				  ->subject($subject)
 				  ->message($message, true)
 				  ->send();				
-								
+				
 				// Success
 				Formaid::success('admin/auth', 'password_email_sent');
 			}
@@ -121,7 +121,7 @@ class Controller_Admin_Auth extends Controller_Template {
 	{
 		// Get the user
 		$token = $this->request->param('var');
-		$reset = ORM::factory('user_reset', array('token' => $token));
+		$reset = ORM::factory('User_Reset', array('token' => $token));
 		$user = ORM::factory('user', $reset->user_id);
 
 		if ($user->loaded())
@@ -139,7 +139,7 @@ class Controller_Admin_Auth extends Controller_Template {
 					$user->save();
 
 					// Delete the reset codes for this user
-					$user_resets = ORM::factory('user_reset')
+					$user_resets = ORM::factory('User_Reset')
 						->where('user_id', '=', $user->id)
 						->find_all();
 

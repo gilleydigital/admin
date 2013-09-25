@@ -62,7 +62,7 @@ class Model_User_Reset extends ORM {
 		{
 			$token = sha1(uniqid(Text::random('alnum', 16), TRUE));
 		}
-		while(ORM::factory('user_reset', array('token' => $token))->loaded());
+		while(ORM::factory('User_Reset', array('token' => $token))->loaded());
 
 		return $token;
 	}
