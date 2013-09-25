@@ -122,7 +122,7 @@ class Controller_Admin_Auth extends Controller_Template {
 		// Get the user
 		$token = $this->request->param('var');
 		$reset = ORM::factory('User_Reset', array('token' => $token));
-		$user = ORM::factory('user', $reset->user_id);
+		$user = ORM::factory('User', $reset->user_id);
 
 		if ($user->loaded())
 		{
