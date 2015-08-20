@@ -6,7 +6,6 @@ class Controller_Admin_Auth extends Controller_Template {
 	public function action_login()
 	{
 		// If they're already logged in, bump them to the main screen
-
 		$this->user = Auth::instance()->get_user();
 		if (is_object($this->user))
 		{
